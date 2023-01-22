@@ -29,6 +29,11 @@ while True:
     
 window.close()
 
+while True:
+    PESCA = pg.locateOnScreen("peixeverde.png", confidence=0.80)
+    if PESCA != None:
+        VARA = pg.locateOnScreen("varadepesca.png", confidence=0.80)
+
 def poke():
     my_position = pg.position()
     pg.moveTo(POKE_POSITION)
