@@ -29,11 +29,6 @@ while True:
     
 window.close()
 
-while True:
-    PESCA = pg.locateOnScreen("peixeverde.png", confidence=0.80)
-    if PESCA != None:
-        VARA = pg.locateOnScreen("varadepesca.png", confidence=0.80)
-
 def poke():
     my_position = pg.position()
     pg.moveTo(POKE_POSITION)
@@ -78,7 +73,7 @@ def key_code(key):
         loot()
     if key == keyboard.Key.space:
         atack(LIST_ATACKS)
-    
+
 with Listener(on_press=key_code) as listener:
     listener.join()
     
